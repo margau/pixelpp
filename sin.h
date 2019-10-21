@@ -10,10 +10,12 @@
 #ifdef  __cplusplus
 extern "C" {
 #endif
- 
+
+#include "common.h"
+
 #include <sys/types.h>
 #include <stdint.h>
- 
+
 /**
  * Sine calculation using interpolated table lookup.
  * Instead of radiants or degrees we use "turns" here. Means this
@@ -26,7 +28,7 @@ extern "C" {
  */
 int16_t sin(int16_t angle);
 uint8_t sinu8(int16_t angle);
- 
+
 /**
  * Cosine calculation using interpolated table lookup.
  * Instead of radiants or degrees we use "turns" here. Means this
@@ -39,7 +41,7 @@ uint8_t sinu8(int16_t angle);
  */
 int16_t cos(int16_t angle);
 uint8_t cosu8(int16_t angle);
- 
+
 #ifdef  __cplusplus
 }
 #endif

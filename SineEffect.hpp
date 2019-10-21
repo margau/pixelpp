@@ -1,6 +1,7 @@
 #ifndef SINEEFFECT_HPP
 #define SINEEFFECT_HPP
-#include <stdint.h>
+
+#include "common.h"
 
 class SineEffect
 {
