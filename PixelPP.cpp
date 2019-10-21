@@ -8,7 +8,7 @@ PixelPP::~PixelPP() {
 
 }
 
-PixelPP::render() {
+void PixelPP::render(void) {
 
 }
 
