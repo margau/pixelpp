@@ -2,16 +2,18 @@
 #define SINEEFFECT_HPP
 
 #include "common.h"
+#include "PixelPP.h"
 
 class SineEffect
 {
 private:
+    PixelPP* _parent;
     uint8_t _width;
     uint8_t _step;
 public:
-    SineEffect(uint8_t freq);
+    SineEffect(PixelPP* parent, uint8_t width);
     ~SineEffect();
-    void render(rgb* leds, uint8_t num_leds);
+    void render();
     void reset();
 };
 

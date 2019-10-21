@@ -63,7 +63,7 @@ static int16_t sin90[TABLE_SIZE+1] = {
  * @param int16_t angle Q15
  * @return int16_t Q15
  */
-int16_t sin(uint16_t angle)
+int16_t sin1(uint16_t angle)
 {
   int16_t v0, v1;
   v0 = (angle >> INTERP_BITS);
@@ -76,7 +76,7 @@ int16_t sin(uint16_t angle)
 
 uint8_t sinu8(uint16_t angle)
 {
-    return (uint8_t)((sin(angle) >> 8) + INT8_MAX + 1);
+    return (uint8_t)((sin1(angle) >> 8) + INT8_MAX + 1);
 }
  
 /**
@@ -89,13 +89,13 @@ uint8_t sinu8(uint16_t angle)
  * @param int16_t angle Q15
  * @return int16_t Q15
  */
-int16_t cos(int16_t angle)
+int16_t cos1(int16_t angle)
 {
   if(angle < 0) { angle += INT16_MAX; angle += 1; }
-  return sin(angle - (int16_t)(((int32_t)INT16_MAX * 270) / 360));
+  return sin1(angle - (int16_t)(((int32_t)INT16_MAX * 270) / 360));
 }
 
 uint8_t cosu8(int16_t angle)
 {
-    return (uint8_t)((cos(angle) >> 8) + INT8_MAX + 1);
+    return (uint8_t)((cos1(angle) >> 8) + INT8_MAX + 1);
 }

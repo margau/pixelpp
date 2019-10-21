@@ -2,6 +2,7 @@
 #define PIXELPP_H
 
 #include "common.h"
+#include "rgb.h"
 
 #define COLOR_MONO 0
 #define COLOR_RGB 1
@@ -10,6 +11,9 @@
 typedef uint8_t  colorType;
 
 class PixelPP {
+  private:
+  rgb* _leds;
+  uint16_t _num_leds;
 
  public:
 
@@ -18,8 +22,10 @@ class PixelPP {
   PixelPP(uint16_t n, colorType t=COLOR_RGB);
   ~PixelPP();
 
-  void
-    render(void);
+  void render(void);
+
+  uint16_t getNumLeds();
+  rgb* getLeds();
 };
 
 #endif
