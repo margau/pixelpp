@@ -16,7 +16,7 @@ class PixelPP {
   ~PixelPP();
 
   void
-    render(void)
-}
+    render(void);
+};
 
 #endif
