@@ -3,11 +3,11 @@
 
 #include "common.h"
 #include "PixelPP.h"
+#include "Effect.hpp"
 
-class SineEffect
+class SineEffect : Effect
 {
 private:
-    PixelPP* _parent;
     uint8_t _width;
     uint8_t _step;
 public:

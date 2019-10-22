@@ -1,6 +1,6 @@
 #include "FillEffect.hpp"
 
-FillEffect::FillEffect(PixelPP* parent, rgb color) : _color(color), _parent(parent)
+FillEffect::FillEffect(PixelPP* parent, rgb color) : _color(color), Effect(parent)
 {
 }
 
