@@ -19,7 +19,7 @@ class PixelPP {
 
   // Constructor: number of LEDs, ColorType
   PixelPP(void);
-  PixelPP(uint16_t n, colorType t=COLOR_RGB);
+  PixelPP(uint16_t n, colorType t=COLOR_RGB, uint8_t * pix=NULL);
   ~PixelPP();
 
   void render(void);
