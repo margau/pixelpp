@@ -14,5 +14,13 @@ PixelPP::~PixelPP() {
 }
 
 void PixelPP::render(void) {
+    for (Effect effect: _effects)
+    {
+        effect.render();
+    }
+}
 
+void PixelPP::addEffect(Effect & effect)
+{
+    _effects.push_back(effect);
 }

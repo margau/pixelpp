@@ -1,3 +1,5 @@
+#ifndef FILLEFFECT_HPP
+#define FILLEFFECT_HPP
 #include "common.h"
 #include "rgb.h"
 #include "PixelPP.h"
@@ -12,3 +14,4 @@ public:
     ~FillEffect();
     void render();
 };
+#endif

@@ -4,6 +4,7 @@
 #include "common.h"
 #include "PixelPP.h"
 #include "Effect.hpp"
+#include "color_conv.hpp"
 
 class SineEffect : Effect
 {
