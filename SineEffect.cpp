@@ -1,7 +1,7 @@
 #include "SineEffect.hpp"
 #include "sin.h"
 
-SineEffect::SineEffect(PixelPP* parent, uint8_t width) : _parent(parent), _width(width)
+SineEffect::SineEffect(PixelPP* parent, uint8_t width) : Effect(parent), _width(width)
 {
     _step = 0;
 }

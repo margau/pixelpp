@@ -1,12 +1,12 @@
 #include "common.h"
 #include "rgb.h"
 #include "PixelPP.h"
+#include "Effect.hpp"
 
-class FillEffect
+class FillEffect : Effect
 {
 private:
     rgb _color;
-    PixelPP* _parent;
 public:
     FillEffect(PixelPP* parent, rgb color);
     ~FillEffect();
