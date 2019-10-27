@@ -2,12 +2,12 @@
 #define EFFECT_HPP
 
 #include "common.h"
-#include "PixelPP.h"
 
+class PixelPP;
 class Effect
 {
 protected:
-    PixelPP* _parent;
+    PixelPP *_parent;
 public:
     Effect(PixelPP* parent);
     virtual void render();
