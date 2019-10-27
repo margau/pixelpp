@@ -7,6 +7,7 @@ PixelPP::PixelPP(uint16_t n, colorType t, uint8_t * pix) {
         } else {
                 _leds = (struct rgb*)malloc(sizeof(struct rgb)*n);
         }
+	_num_leds = n;
 }
 
 PixelPP::~PixelPP() {
@@ -23,4 +24,14 @@ void PixelPP::render(void) {
 void PixelPP::addEffect(Effect & effect)
 {
     _effects.push_back(effect);
+}
+
+uint16_t PixelPP::getNumLeds()
+{
+	return _num_leds;
+}
+
+rgb* PixelPP::getLeds()
+{
+	return _leds;
 }
