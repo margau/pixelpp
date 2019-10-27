@@ -10,6 +10,7 @@ protected:
     PixelPP *_parent;
 public:
     Effect(PixelPP* parent);
+    ~Effect();
     virtual void render();
 };
 #endif
