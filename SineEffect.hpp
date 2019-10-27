@@ -6,7 +6,7 @@
 #include "Effect.hpp"
 #include "color_conv.hpp"
 
-class SineEffect : Effect
+class SineEffect : public Effect
 {
 private:
     uint8_t _width;

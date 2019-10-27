@@ -5,7 +5,7 @@
 #include "PixelPP.h"
 #include "Effect.hpp"
 
-class FillEffect : Effect
+class FillEffect : public Effect
 {
 private:
     rgb _color;
