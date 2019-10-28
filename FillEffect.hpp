@@ -12,6 +12,6 @@ private:
 public:
     FillEffect(PixelPP* parent, rgb color);
     ~FillEffect();
-    void render();
+    void render(unsigned long t);
 };
 #endif

@@ -15,9 +15,10 @@ PixelPP::~PixelPP() {
 }
 
 void PixelPP::render(void) {
+  _time = millis();
 	for (Effect* effect: _effects)
 	{
-		effect->render();
+		effect->render(_time);
 	}
 }
 
