@@ -2,11 +2,11 @@
 #include "rgb.h"
 
 PixelPP::PixelPP(uint16_t n, colorType t, uint8_t * pix) {
-		if(pix != NULL) {
-				_leds = (struct rgb*) pix;
-		} else {
-				_leds = (struct rgb*)malloc(sizeof(struct rgb)*n);
-		}
+	if(pix != NULL) {
+		_leds = (struct rgb*) pix;
+	} else {
+		_leds = (struct rgb*)malloc(sizeof(struct rgb)*n);
+	}
 	_num_leds = n;
 }
 
@@ -21,9 +21,10 @@ void PixelPP::render(void) {
 	}
 }
 
-void PixelPP::addEffect(Effect* effect)
+PixelPP* PixelPP::addEffect(Effect* effect)
 {
 	_effects.push_back(effect);
+	return this;
 }
 
 uint16_t PixelPP::getNumLeds()
@@ -34,9 +35,4 @@ uint16_t PixelPP::getNumLeds()
 rgb* PixelPP::getLeds()
 {
 	return _leds;
-}
-
-Effect* PixelPP::getEffect(uint8_t i)
-{
-	return _effects[i];
 }

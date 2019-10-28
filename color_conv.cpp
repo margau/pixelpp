@@ -2,12 +2,12 @@
 
 #define HSV_SECTION_3 (0x40)
 
+#pragma GCC optimize ("Ofast")
 void rgb2hsv(const rgb & rgb, hsv & hsv)
 {
     uint8_t minval = (rgb.red < rgb.green) ? (rgb.red < rgb.blue ? rgb.red : rgb.blue) : (rgb.green < rgb.blue ? rgb.green : rgb.blue);
     uint8_t maxval = (rgb.red > rgb.green) ? (rgb.red > rgb.blue ? rgb.red : rgb.blue) : (rgb.green > rgb.blue ? rgb.green : rgb.blue);
     uint8_t delta = maxval - minval;
-    printf("%d, %d, %d\n", maxval, minval, delta);
 
     if (delta == 0)
     {
@@ -15,7 +15,9 @@ void rgb2hsv(const rgb & rgb, hsv & hsv)
     }
     else if (maxval == rgb.red)
     {
-        hsv.hue = ((32 * (192 * (rgb.green - rgb.blue) / delta)) / 192) % (3 * HSV_SECTION_3);
+        // % 192 calls the software mod routine, so we have to optimize it in code
+        uint8_t temp = ((32 * (192 * (rgb.green - rgb.blue) / delta)) / 192);
+        hsv.hue = temp >= 192 ? (temp & 0x3f) : temp;
     }
     else if (maxval == rgb.green)
     {
