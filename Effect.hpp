@@ -11,6 +11,6 @@ protected:
 public:
     Effect(PixelPP* parent);
     ~Effect();
-    virtual void render() = 0;
+    virtual void render(unsigned long t) = 0;
 };
 #endif

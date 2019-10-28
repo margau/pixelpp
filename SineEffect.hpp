@@ -10,11 +10,11 @@ class SineEffect : public Effect
 {
 private:
     uint8_t _width;
-    uint8_t _step;
+    uint16_t _peri;
 public:
-    SineEffect(PixelPP* parent, uint8_t width);
+    SineEffect(PixelPP* parent, uint8_t width, uint16_t period);
     ~SineEffect();
-    void render();
+    void render(unsigned long t);
     void reset();
 };
 

@@ -16,13 +16,13 @@ class PixelPP {
   std::vector<Effect*> _effects;
   LEDColor _type;
   LEDChannels _channels;
+  unsigned long _time = 0;
  public:
   // Constructor: number of LEDs, ColorType
   PixelPP(void);
   PixelPP(uint16_t n, uint8_t * pix = NULL, LEDColor t = LEDColor::RGB, LEDChannels channels = LEDChannels::RGB);
   ~PixelPP();
   PixelPP* addEffect(Effect* effect);
-
   void render(void);
 
   uint16_t getNumLeds();
