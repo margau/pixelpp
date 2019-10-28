@@ -1,7 +1,7 @@
 #include "PixelPP.h"
 #include "rgb.h"
 
-PixelPP::PixelPP(uint16_t n, uint8_t * pix = NULL, LEDColor t = LEDColor::RGB, LEDChannels channels = LEDChannels::RGB) : _type(t), _num_leds(n), _channels(channels) {
+PixelPP::PixelPP(uint16_t n, uint8_t * pix, LEDColor t, LEDChannels channels) : _type(t), _num_leds(n), _channels(channels) {
 	if(pix != NULL) {
 		_leds = pix;
 	} else {
@@ -34,10 +34,10 @@ uint16_t PixelPP::getNumLeds()
 
 void PixelPP::setPixel(uint16_t n, rgb const & rgb)
 {
-	uint8_t rOffset = (_type >> 4) & 3;
-	uint8_t gOffset = (_type >> 2) & 3;
-	uint8_t bOffset = _type & 3;
-	_leds[_channels * n + rOffset] = rgb.red;
-	_leds[_channels * n + gOffset] = rgb.green;
-	_leds[_channels * n + bOffset] = rgb.blue;
+	uint8_t rOffset = ((uint16_t)_type >> 4) & 3;
+	uint8_t gOffset = ((uint16_t)_type >> 2) & 3;
+	uint8_t bOffset = (uint16_t)_type & 3;
+	_leds[(uint8_t)_channels * n + rOffset] = rgb.red;
+	_leds[(uint8_t)_channels * n + gOffset] = rgb.green;
+	_leds[(uint8_t)_channels * n + bOffset] = rgb.blue;
 }
