@@ -6,6 +6,3 @@ Effect::Effect(PixelPP* parent) : _parent(parent)
 Effect::~Effect()
 {
 }
-void Effect::render()
-{
-}

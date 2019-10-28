@@ -15,18 +15,20 @@ class PixelPP {
   private:
   rgb* _leds;
   uint16_t _num_leds;
-  std::vector<Effect> _effects;
+  std::vector<Effect*> _effects;
  public:
   // Constructor: number of LEDs, ColorType
   PixelPP(void);
   PixelPP(uint16_t n, colorType t=COLOR_RGB, uint8_t * pix=NULL);
   ~PixelPP();
-  void addEffect(Effect & effect);
+  void addEffect(Effect* effect);
 
   void render(void);
 
   uint16_t getNumLeds();
   rgb* getLeds();
+
+  Effect* getEffect(uint8_t i);
 };
 
 #endif
