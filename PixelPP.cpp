@@ -34,10 +34,10 @@ uint16_t PixelPP::getNumLeds()
 
 void PixelPP::setPixel(uint16_t n, rgb const & rgb)
 {
-	uint8_t rOffset = ((uint16_t)_type >> 4) & 3;
-	uint8_t gOffset = ((uint16_t)_type >> 2) & 3;
-	uint8_t bOffset = (uint16_t)_type & 3;
-	_leds[(uint8_t)_channels * n + rOffset] = rgb.red;
-	_leds[(uint8_t)_channels * n + gOffset] = rgb.green;
-	_leds[(uint8_t)_channels * n + bOffset] = rgb.blue;
+	uint8_t rOffset = ((uint8_t)_type >> 4) & 3;
+	uint8_t gOffset = ((uint8_t)_type >> 2) & 3;
+	uint8_t bOffset = (uint8_t)_type & 3;
+	_leds[((uint8_t)_channels * n) + rOffset] = rgb.red;
+	_leds[((uint8_t)_channels * n) + gOffset] = rgb.green;
+	_leds[((uint8_t)_channels * n) + bOffset] = rgb.blue;
 }

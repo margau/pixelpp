@@ -8,7 +8,7 @@
 #define COLOR_BLUE 2
 #define OFFSET(r, g, b) (((r) << 4) | ((g) << 2) | (b))
 
-enum class LEDColor : uint16_t {
+enum class LEDColor : uint8_t {
 	RGB = OFFSET(COLOR_RED, COLOR_GREEN, COLOR_BLUE),
 	GRB = OFFSET(COLOR_GREEN, COLOR_RED, COLOR_BLUE),
 	RBG = OFFSET(COLOR_RED, COLOR_BLUE, COLOR_GREEN),
@@ -17,8 +17,7 @@ enum class LEDColor : uint16_t {
 	GBR = OFFSET(COLOR_GREEN, COLOR_BLUE, COLOR_RED)
 };
 
-enum class LEDChannels : uint8_t
-{
+enum class LEDChannels : uint8_t {
 	RGB = 3,
 	RGBW = 4
 };

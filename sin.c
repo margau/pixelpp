@@ -78,7 +78,7 @@ int16_t sin1(uint16_t angle)
 
 uint8_t sinu8(uint16_t angle)
 {
-    return (uint8_t)((sin1(angle) >> 8) + INT8_MAX + 1);
+    return (uint8_t)((sin1(angle % 0x8000) >> 8) + 0x80);
 }
 
 /**
