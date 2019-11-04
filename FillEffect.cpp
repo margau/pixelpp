@@ -12,7 +12,7 @@ void FillEffect::render(unsigned long t)
 {
 	for (uint16_t i = 0; i < _parent->getNumLeds(); i++)
 	{
-		_parent->setPixel(i, _color);
+    _parent->_leds_rgb[i] = _color;
 	}
 
 }

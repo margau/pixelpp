@@ -24,7 +24,7 @@ class PixelPP {
   ~PixelPP();
   PixelPP* addEffect(Effect* effect);
   void render(void);
-
+  rgb* _leds_rgb;
   uint16_t getNumLeds();
   void setPixel(uint16_t n, rgb const & rgb);
 };
