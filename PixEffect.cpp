@@ -27,8 +27,7 @@ void PixEffect::render(unsigned long t)
                         it = pixfadeVector.erase(it);
                 } else {
                         // Display pixel and move on
-                        //uint16_t factor = (INT16_MAX*(it->end-t))/_length;
-                        uint16_t factor = INT16_MAX;
+                        uint8_t factor = (INT8_MAX*(it->end-t))/_length;
                         rgb& pix = _parent->_leds_rgb[it->n];
                         pix=_color;
 
