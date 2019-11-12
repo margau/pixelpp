@@ -2,7 +2,7 @@
 #define SINEEFFECT_HPP
 
 #include "common.h"
-#include "PixelPP.h"
+#include "PixelPP.hpp"
 #include "Effect.hpp"
 #include "color_conv.hpp"
 

@@ -23,6 +23,7 @@ class PixelPP {
   PixelPP(uint16_t n, uint8_t * pix = NULL, LEDColor t = LEDColor::RGB, LEDChannels channels = LEDChannels::RGB);
   ~PixelPP();
   PixelPP* addEffect(Effect* effect);
+  void clearEffects();
   void render(void);
   rgb* _leds_rgb;
   uint16_t getNumLeds();

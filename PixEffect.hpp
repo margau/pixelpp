@@ -2,7 +2,7 @@
 #define PixEFFECT_HPP
 #include "common.h"
 #include "rgb.h"
-#include "PixelPP.h"
+#include "PixelPP.hpp"
 #include "Effect.hpp"
 
 struct pixfade {

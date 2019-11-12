@@ -2,7 +2,7 @@
 #define FILLEFFECT_HPP
 #include "common.h"
 #include "rgb.h"
-#include "PixelPP.h"
+#include "PixelPP.hpp"
 #include "Effect.hpp"
 
 class FillEffect : public Effect
