@@ -1,3 +1,4 @@
+#ifdef COLORCONV
 #ifndef COLOR_CONV_HPP
 #define COLOR_CONV_HPP
 
@@ -7,4 +8,5 @@
 void rgb2hsv(const rgb & rgb, hsv & hsv);
 void hsv2rgb(const hsv & hsv, rgb & rgb);
 
+#endif
 #endif

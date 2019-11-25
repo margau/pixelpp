@@ -29,6 +29,7 @@ void PixelPP::render(void) {
 PixelPP* PixelPP::addEffect(Effect* effect)
 {
 	_effects.push_back(effect);
+	Serial.println("Effect added, now " + String((uint8_t)_effects.size()) + " effects.");
 	return this;
 }
 

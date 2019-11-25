@@ -4,6 +4,7 @@
 #include "common.h"
 #include "rgb.h"
 #include "Effect.hpp"
+#include <list>
 
 #define COLOR_MONO 0
 
@@ -13,7 +14,7 @@ class PixelPP {
   private:
   uint8_t* _leds;
   uint16_t _num_leds;
-  std::vector<Effect*> _effects;
+  std::list<Effect*> _effects;
   LEDColor _type;
   LEDChannels _channels;
   unsigned long _time = 0;

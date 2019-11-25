@@ -1,8 +1,8 @@
+#ifdef COLORCONV
 #include "color_conv.hpp"
 
 #define HSV_SECTION_3 (0x40)
 
-#pragma GCC optimize ("Ofast")
 void rgb2hsv(const rgb & rgb, hsv & hsv)
 {
     uint8_t minval = (rgb.red < rgb.green) ? (rgb.red < rgb.blue ? rgb.red : rgb.blue) : (rgb.green < rgb.blue ? rgb.green : rgb.blue);
@@ -89,3 +89,4 @@ void hsv2rgb(const hsv & hsv, rgb & rgb)
         rgb.blue = brightness_floor;
     }
 }
+#endif
