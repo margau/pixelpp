@@ -3,6 +3,7 @@
 PixEffect::PixEffect(PixelPP* parent, rgb color, uint16_t length, uint8_t num) : _length(length), _num(num), _color(color), Effect(parent)
 {
         randomSeed(analogRead(0));
+        pixfadeVector.reserve(parent->getNumLeds());
 }
 
 PixEffect::~PixEffect()
