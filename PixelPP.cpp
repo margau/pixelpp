@@ -39,6 +39,10 @@ PixelPP* PixelPP::addEffect(Effect* effect)
 
 void PixelPP::clearEffects()
 {
+	for (Effect* e: _effects)
+	{
+		delete e;
+	}
 	_effects.clear();
 }
 

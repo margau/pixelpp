@@ -12,6 +12,10 @@ SineEffect::~SineEffect()
 
 void SineEffect::render(unsigned long t)
 {
+    if (_peri == 0 || _width == 0)
+    {
+        return;
+    }
     uint16_t numPixels = _parent->getNumLeds();
     for (uint16_t i = 0; i < numPixels; i++)
     {

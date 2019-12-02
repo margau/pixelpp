@@ -7,6 +7,7 @@ PixEffect::PixEffect(PixelPP* parent, rgb color, uint16_t length, uint8_t num) :
 
 PixEffect::~PixEffect()
 {
+
 }
 
 void PixEffect::render(unsigned long t)

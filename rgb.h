@@ -28,12 +28,6 @@ typedef struct rgb {
   uint8_t blue;
 } rgb;
 
-typedef struct hsv {
-	uint8_t hue;
-	uint8_t sat;
-	uint8_t val;
-} hsv;
-
-//#define ColorToRGB(color) {(((color) >> 16) & 0xFF, ((color) >> 8) & 0xFF, (color) & 0xFF)}
+// #define ColorToRGB(color) {(((color) >> 16) & 0xFF, ((color) >> 8) & 0xFF, (color) & 0xFF)}
 
 #endif
