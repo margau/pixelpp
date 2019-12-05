@@ -15,14 +15,14 @@ PixelPP::~PixelPP() {
 }
 
 void PixelPP::render(void) {
-	_time = millis();
+	uint32_t time = millis();
 	 for (uint16_t i = 0; i < _num_leds; i++)
         {
 		_leds_rgb[i] = {0,0,0};
         }
 	for (Effect* effect: _effects)
 	{
-		effect->render(_time);
+		effect->render(time);
 	}
 	for (uint16_t i = 0; i < _num_leds; i++)
 	{

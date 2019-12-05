@@ -4,6 +4,7 @@
 #include "rgb.h"
 #include "PixelPP.hpp"
 #include "Effect.hpp"
+#include <list>
 
 struct pixfade {
   uint16_t n;
@@ -14,7 +15,7 @@ class PixEffect : public Effect
 {
 private:
     rgb _color;
-    std::vector<pixfade> pixfadeVector;
+    std::list<pixfade> pixfadeVector;
     uint16_t _length;
     uint8_t _num;
 public:

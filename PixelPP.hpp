@@ -17,7 +17,6 @@ class PixelPP {
   std::list<Effect*> _effects;
   LEDColor _type;
   LEDChannels _channels;
-  unsigned long _time = 0;
  public:
   // Constructor: number of LEDs, ColorType
   PixelPP(void);
