@@ -6,5 +6,6 @@
 #include "SineEffect.hpp"
 #include "PixEffect.hpp"
 #include "SawtoothEffect.hpp"
+#include "DimEffect.hpp"
 
 #endif

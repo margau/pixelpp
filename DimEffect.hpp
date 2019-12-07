@@ -12,6 +12,6 @@ private:
 public:
     DimEffect(PixelPP* parent, uint8_t percentage);
     ~DimEffect();
-    void render(uint32_t t);
+    void render(unsigned long t);
 };
 #endif
