@@ -13,6 +13,11 @@ void PixEffect::render(unsigned long t)
 {
 	static uint16_t lastadd = 0;
 
+	if (_length == 0 || _num == 0)
+	{
+		return;
+	}
+
 	if (t - lastadd >= _length / _num)
 	{
 		pixfadeVector.push_back({
