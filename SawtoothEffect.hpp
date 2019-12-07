@@ -5,6 +5,11 @@
 #include "PixelPP.hpp"
 #include "Effect.hpp"
 
+#define INT16_BITS  (8 * sizeof(int16_t))
+#ifndef INT16_MAX
+#define INT16_MAX   ((1<<(INT16_BITS-1))-1)
+#endif
+
 class SawtoothEffect : public Effect
 {
 private:
